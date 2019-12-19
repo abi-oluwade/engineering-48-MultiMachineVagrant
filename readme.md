@@ -9,6 +9,7 @@ to the multi machine vagrant environment folder.
 
 ## Example of two virtual machines being defined in one vagrant file
 
+````
 Vagrant.configure("2") do |config|
   config.vm.define "app" do |app|
     app.vm.box = "ubuntu/xenial64"
@@ -26,3 +27,5 @@ Vagrant.configure("2") do |config|
     #creates connection for the synced folders betwwen host and vm
     db.vm.synced_folder "environment/db", "/home/ubuntu/environment"
   end
+  
+````
