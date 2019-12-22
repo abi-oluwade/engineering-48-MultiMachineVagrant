@@ -14,10 +14,10 @@ app.get('/' , function(req , res){
 
 });
 
-// connect to database
+// connect to database, this is where we are accessing the envirenmental variables for out vitual machine.
 if(process.env.DB_HOST) {
-  mongoose.connect(process.env.DB_HOST);
-
+  mongoose.connect(process.env.DB_HOST); // So here the DB_HOST variable we assinged was passed as an arguement to the mongoose.connect method.
+// export DB_HOST=mongod://192.168.10.150:27107/posts IS BASICALLY export DB_HOST={VARIABLE} 
   app.get("/posts" , function(req,res){
       Post.find({} , function(err, posts){
         if(err) return res.send(err);
