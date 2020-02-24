@@ -41,7 +41,7 @@ Vagrant.configure("2") do |config|
 
 ````
 
-- export DB_HOST=mongod://192.168.10.150:27107/posts
+- export DB_HOST=mongod://192.168.10.150:27017/posts
 
 - export DB_HOST= {VARIABLE}
 
